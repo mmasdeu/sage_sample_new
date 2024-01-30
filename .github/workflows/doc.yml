@@ -24,7 +24,7 @@ jobs:
         run: |
           mamba env update --quiet -n test -f environment.yml
           conda list
-      - name: install svgdigitizer
+      - name: install darmonpoints
         shell: bash -l {0}
         run: |
           pip install -e .
@@ -35,8 +35,8 @@ jobs:
           make html
           mv generated/html generated/html_
           mkdir generated/html
-          mv generated/html_ generated/html/svgdigitizer
-          touch generated/html/svgdigitizer/.nojekyll
+          mv generated/html_ generated/html/darmonpoints
+          touch generated/html/darmonpoints/.nojekyll
       - name: fix permissions
         shell: bash -l {0}
         run: |
@@ -46,7 +46,7 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
-          FOLDER: doc/generated/html/svgdigitizer
+          FOLDER: doc/generated/html/darmonpoints
           TARGET_FOLDER: docs
         if: ${{ github.event_name == 'push' }}
       - name: detect broken links
@@ -55,5 +55,5 @@ jobs:
           python -m http.server 8880 --directory doc/generated/html &
           sleep 1
           # repology.org only passes the check locally but not in the Github CI. see #169
-          linkchecker --check-extern http://localhost:8880/svgdigitizer/ --ignore-url="https://repology.org/*" --no-warnings
+          linkchecker --check-extern http://localhost:8880/darmonpoints/ --ignore-url="https://repology.org/*" --no-warnings
 
