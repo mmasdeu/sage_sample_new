@@ -50,7 +50,7 @@ html_theme_options = sage_docbuild.conf.html_theme_options
 # pygments_style = sage_docbuild.conf.pygments_style
 # pygments_dark_style = sage_docbuild.conf.pygments_dark_style
 # html_css_files = sage_docbuild.conf.html_css_files
-x
+
 html_css_files = ["https://doc.sagemath.org/html/en/reference/_static/custom-furo.css"]
 
 html_theme_options["light_logo"] = html_theme_options["dark_logo"] = "logo.svg"
