@@ -52,8 +52,8 @@ html_css_files = sage_docbuild.conf.html_css_files
 
 html_css_files = ["https://doc.sagemath.org/html/en/reference/_static/custom-furo.css"]
 
-# html_theme_options["light_logo"] = html_theme_options["dark_logo"] = "logo.svg"
-# html_static_path = ["static"]
+html_theme_options["light_logo"] = html_theme_options["dark_logo"] = "logo.svg"
+html_static_path = ["static"]
 
 # Output file base name for HTML help builder.
 htmlhelp_basename = "darmonpoints"

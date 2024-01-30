@@ -12,6 +12,7 @@ dependencies:
   - isort
   - ipywidgets
   - jupytext
+  - matplotlib-base
   - myst-parser
   - myst-nb
   - pip
