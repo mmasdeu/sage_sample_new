@@ -47,8 +47,8 @@ intersphinx_mapping = {"sage": ("https://doc.sagemath.org/html/en/reference", No
 # Imitate the look of the SageMath documentation.
 html_theme = sage_docbuild.conf.html_theme
 html_theme_options = sage_docbuild.conf.html_theme_options
-pygments_style = sage_docbuild.conf.pygments_style
-pygments_dark_style = sage_docbuild.conf.pygments_dark_style
+# pygments_style = sage_docbuild.conf.pygments_style
+# pygments_dark_style = sage_docbuild.conf.pygments_dark_style
 html_css_files = sage_docbuild.conf.html_css_files
 
 if html_css_files != ["custom-furo.css"]:
