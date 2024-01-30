@@ -49,20 +49,15 @@ html_theme = sage_docbuild.conf.html_theme
 html_theme_options = sage_docbuild.conf.html_theme_options
 # pygments_style = sage_docbuild.conf.pygments_style
 # pygments_dark_style = sage_docbuild.conf.pygments_dark_style
-html_css_files = sage_docbuild.conf.html_css_files
-
-if html_css_files != ["custom-furo.css"]:
-    raise NotImplementedError(
-        "CSS customization has changed in SageMath. The configuration of sage-flatsurf documentation build needs to be updated."
-    )
-
+# html_css_files = sage_docbuild.conf.html_css_files
+x
 html_css_files = ["https://doc.sagemath.org/html/en/reference/_static/custom-furo.css"]
 
 html_theme_options["light_logo"] = html_theme_options["dark_logo"] = "logo.svg"
 html_static_path = ["static"]
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = "sage-flatsurfdoc"
+htmlhelp_basename = "darmonpoints"
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -74,9 +69,9 @@ latex_elements = {}
 latex_documents = [
     (
         "index",
-        "sage-flatsurf.tex",
-        "sage-flatsurf Documentation",
-        "the sage-flatsurf authors",
+        "darmonpoints.tex",
+        "Darmonpoints Documentation",
+        "the package authors",
         "manual",
     ),
 ]
@@ -88,9 +83,9 @@ latex_documents = [
 man_pages = [
     (
         "index",
-        "sage-flatsurf",
-        "sage-flatsurf Documentation",
-        ["the sage-flatsurf authors"],
+        "darmonpoints",
+        "darmonpoints Documentation",
+        ["the package authors"],
         1,
     )
 ]
@@ -103,10 +98,10 @@ man_pages = [
 texinfo_documents = [
     (
         "index",
-        "sage-flatsurf",
-        "sage-flatsurf Documentation",
-        "the sage-flatsurf authors",
-        "sage-flatsurf",
+        "darmonpoints",
+        "darmonpoints Documentation",
+        "the package authors",
+        "darmonpoints",
         "One line description of project.",
         "Miscellaneous",
     ),
