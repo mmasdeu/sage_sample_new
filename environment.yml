@@ -7,7 +7,7 @@ channels:
 dependencies:
   - black>=23,<24
   - docutils
-  - pygments
+  - furo
   - alabaster
   - isort
   - ipywidgets
@@ -15,6 +15,7 @@ dependencies:
   - myst-parser
   - myst-nb
   - pip
+  - pygments
   - pylint>=3,<3.1
   - python
   - sagelib
@@ -24,3 +25,4 @@ dependencies:
     - linkchecker
     - sphinx_rtd_theme
     - sphinx-design
+
