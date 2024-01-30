@@ -16,7 +16,11 @@ kernelspec:
 
 ## How to use darmonpoints
 
-```sage
+```{code-cell}
+---
+jupyter:
+  outputs_hidden: false
+---
 from darmonpoints.darmonpoint import *
 darmon_point() # Should ouput the answer to the ultimate question
 ```
@@ -25,6 +29,11 @@ darmon_point() # Should ouput the answer to the ultimate question
 
 Maybe you enjoy seeing a plot of $y=\sin(x)$. In this case, here you go:
 
-```sage
+
+```{code-cell}
+---
+jupyter:
+  outputs_hidden: false
+---
 plot(sin,0,2*pi)
 ```
