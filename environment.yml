@@ -6,6 +6,9 @@ channels:
   - conda-forge
 dependencies:
   - black>=23,<24
+  - docutils
+  - pygments
+  - alabaster
   - isort
   - ipywidgets
   - jupytext
