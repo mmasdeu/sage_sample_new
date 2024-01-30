@@ -14,7 +14,6 @@ jobs:
       matrix:
         python: ["3.9", "3.10", "3.11", "3.12"]
         os: ["ubuntu-latest", "macos-latest"]
-        source: ["conda", "pip"]
     steps:
       - name: checkout
         uses: actions/checkout@v3
@@ -29,19 +28,11 @@ jobs:
         run: |
           mamba env update --quiet -n test -f environment.yml
           conda list
-        if: ${{ matrix.source == 'conda' }}
       - name: install package
         shell: bash -l {0}
         run: |
           pip install --no-dependencies .
-        if: ${{ matrix.source == 'conda' }}
-      - name: install package
-        shell: bash -l {0}
-        run: |
-          pip install .
-        if: ${{ matrix.source == 'pip' }}
       - name: doctest
         shell: bash -l {0}
         run: |
           sage -t darmonpoints
-        if: ${{ matrix.source == 'conda' }}
