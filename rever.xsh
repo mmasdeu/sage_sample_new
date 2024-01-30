@@ -1,5 +1,5 @@
 # ********************************************************************
-#  This file is part of svgdigitizer.
+#  This file is part of darmonpoints.
 #
 #        Copyright (C) 2022 Albert Engstfeld
 #        Copyright (C) 2022 Johannes Hermann
