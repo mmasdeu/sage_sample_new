@@ -45,16 +45,16 @@ intersphinx_mapping = {"sage": ("https://doc.sagemath.org/html/en/reference", No
 # -- Options for HTML output ----------------------------------------------
 
 # Imitate the look of the SageMath documentation.
-html_theme = sage_docbuild.conf.html_theme
-html_theme_options = sage_docbuild.conf.html_theme_options
+# html_theme = sage_docbuild.conf.html_theme
+# html_theme_options = sage_docbuild.conf.html_theme_options
 # pygments_style = sage_docbuild.conf.pygments_style
 # pygments_dark_style = sage_docbuild.conf.pygments_dark_style
 # html_css_files = sage_docbuild.conf.html_css_files
 
-html_css_files = ["https://doc.sagemath.org/html/en/reference/_static/custom-furo.css"]
+# html_css_files = ["https://doc.sagemath.org/html/en/reference/_static/custom-furo.css"]
 
-html_theme_options["light_logo"] = html_theme_options["dark_logo"] = "logo.svg"
-html_static_path = ["static"]
+# html_theme_options["light_logo"] = html_theme_options["dark_logo"] = "logo.svg"
+# html_static_path = ["static"]
 
 # Output file base name for HTML help builder.
 htmlhelp_basename = "darmonpoints"
