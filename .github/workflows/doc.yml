@@ -23,7 +23,7 @@ jobs:
       - name: install package
         shell: bash -l {0}
         run: |
-          pip install --verbose --no-index .
+          pip install --no-dependencies .
       - name: build documentation
         shell: bash -l {0}
         run: |
