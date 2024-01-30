@@ -16,20 +16,15 @@ kernelspec:
 
 ## How to use darmonpoints
 
-
-```{code-cell}
----
-jupyter:
-  outputs_hidden: false
----
+```sage
 from darmonpoints.darmonpoint import *
 darmon_point() # Should ouput the answer to the ultimate question
 ```
 
-```{code-cell}
----
-jupyter:
-  outputs_hidden: false
----
-plot(sin,0,1)
+## Here is a stupid plot
+
+Maybe you enjoy seeing a plot of $y=\sin(x)$. In this case, here you go:
+
+```sage
+plot(sin,0,2*pi)
 ```
