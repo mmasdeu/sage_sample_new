@@ -27,12 +27,12 @@ jobs:
       - name: pylint
         shell: bash -l {0}
         run: |
-          pylint svgdigitizer
+          pylint darmonpoints
       - name: black
         shell: bash -l {0}
         run: |
-          black --check --diff svgdigitizer
+          black --check --diff darmonpoints
       - name: isort
         shell: bash -l {0}
         run: |
-          isort --check --diff svgdigitizer --line-length 256
+          isort --check --diff darmonpoints --line-length 256
