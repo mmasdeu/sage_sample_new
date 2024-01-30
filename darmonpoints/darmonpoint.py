@@ -1,4 +1,4 @@
-r'''
+r"""
 Darmon Points package
 =====================
 
@@ -9,11 +9,11 @@ EXAMPLES::
 sage: from darmonpoints.darmonpoint import darmon_point
 sage: darmon_point()
 42
+"""
 
-'''
 
 def darmon_point():
-    r'''
+    r"""
     This is a placeholder for some documentation.
 
     EXAMPLES::
@@ -21,5 +21,5 @@ def darmon_point():
     sage: from darmonpoints.darmonpoint import darmon_point
     sage: darmon_point()
     42
-    '''
+    """
     return 42
