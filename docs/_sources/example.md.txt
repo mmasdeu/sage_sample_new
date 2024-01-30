@@ -22,7 +22,7 @@ jupyter:
   outputs_hidden: false
 ---
 from darmonpoints.darmonpoint import *
-darmon_point() # Should ouput the answer to the ultimate question
+darmon_point() # Should output the answer to the ultimate question
 ```
 
 ## Here is a stupid plot
