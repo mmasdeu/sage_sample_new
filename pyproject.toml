@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=61.2"]
+requires = ["setuptools>=61.2","Cython", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -9,9 +9,7 @@ classifiers = ["License :: OSI Approved :: GNU General Public License v3 or late
 description = "darmonpoints has no description yet."
 readme = "README.md"
 requires-python = ">=3.9"
-dependencies = [
-    "cython",
-]
+dependencies = []
 
 [tool.setuptools]
 packages = [
