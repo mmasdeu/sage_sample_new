@@ -17,10 +17,6 @@ kernelspec:
 ## How to use darmonpoints
 
 ```{code-cell}
----
-jupyter:
-  outputs_hidden: false
----
 from darmonpoints.darmonpoint import *
 darmon_point() # Should output the answer to the ultimate question
 ```
