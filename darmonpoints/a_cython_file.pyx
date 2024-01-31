@@ -1,4 +1,4 @@
-from sage.all import Z
+from sage.all import ZZ
 cimport cython
 
 cpdef cython_test():
