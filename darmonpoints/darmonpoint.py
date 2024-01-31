@@ -10,7 +10,7 @@ sage: from darmonpoints.darmonpoint import darmon_point
 sage: darmon_point()
 42
 """
-from darmonpoints.a_cython_file import cython_test
+from .a_cython_file import cython_test
 
 def darmon_point():
     r"""
