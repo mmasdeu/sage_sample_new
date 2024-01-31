@@ -31,9 +31,5 @@ Maybe you enjoy seeing a plot of $y=\sin(x)$. In this case, here you go:
 
 
 ```{code-cell}
----
-jupyter:
-  outputs_hidden: false
----
 plot(sin,0,2*pi)
 ```
