@@ -24,10 +24,14 @@ jobs:
         run: |
           mamba env update --quiet -n test -f environment.yml
           conda list
+      - name: install package
+        shell: bash -l {0}
+        run: |
+          pip install --no-dependencies .
       - name: pylint
         shell: bash -l {0}
         run: |
-          pylint darmonpoints
+          PYTHONSAFEPATH=1 pylint darmonpoints
       - name: black
         shell: bash -l {0}
         run: |
