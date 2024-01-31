@@ -1,10 +1,7 @@
 # ********************************************************************
 #  This file is part of darmonpoints.
 #
-#        Copyright (C) 2022 Albert Engstfeld
-#        Copyright (C) 2022 Johannes Hermann
-#        Copyright (C) 2022 Julian Rüth
-#        Copyright (C) 2022 Nicolas Hörmann
+#        Copyright (C) 2020-2022 Julian Rüth
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -25,40 +22,41 @@
 # SOFTWARE.
 # ********************************************************************
 
-# Check that we are on the master branch
-branch=$(git branch --show-current)
-if branch.strip() != "master":
-  raise Exception("You must be on the master branch to release.")
-# and that it is up to date with origin/master
-git fetch https://github.com/echemdb/svgdigitizer.git
-git reset FETCH_HEAD
-git diff --exit-code
-git diff --cached --exit-code
+import sys
 
-$PROJECT = 'svgdigitizer'
+try:
+  input("Are you sure you are on the main branch which is identical to origin/main? [ENTER]")
+except KeyboardInterrupt:
+  sys.exit(1)
+
+from rever.activities.command import command
+
+command('build', 'python -m build')
+command('twine', 'twine upload dist/*')
+
+$PROJECT = 'darmonpoints'
 
 $ACTIVITIES = [
     'version_bump',
     'changelog',
+    'build',
+    'twine',
     'tag',
     'push_tag',
-    'pypi',
     'ghrelease',
 ]
 
 $VERSION_BUMP_PATTERNS = [
-    ('pyproject.toml', r'version =', 'version = "$VERSION"'),
-    ('doc/conf.py', r"release = ", r"release = '$VERSION'"),
+  ('pyproject.toml', r"version =", 'version = "$VERSION"'),
+  ('doc/conf.py', r"release =", 'release = "$VERSION"'),
 ]
 
 $CHANGELOG_FILENAME = 'ChangeLog'
 $CHANGELOG_TEMPLATE = 'TEMPLATE.rst'
 $CHANGELOG_NEWS = 'doc/news'
-$PUSH_TAG_REMOTE = 'git@github.com:echemdb/svgdigitizer.git'
+$PUSH_TAG_REMOTE = 'git@github.com:mmasdeu/sage_sample_new.git'
 
-$PYPI_BUILD_COMMANDS = ['sdist', 'bdist_wheel']
+$GITHUB_ORG = 'mmasdeu'
+$GITHUB_REPO = 'sage_sample_new'
 
-$GITHUB_ORG = 'echemdb'
-$GITHUB_REPO = 'svgdigitizer'
-
-$CHANGELOG_CATEGORIES = ('Added', 'Changed', 'Deprecated', 'Removed', 'Fixed', 'Performance')
+$GHRELEASE_ASSETS = ['dist/darmonpoints-' + $VERSION + '.tar.gz']
